@@ -2,7 +2,7 @@ const loginFormEll = document.querySelector('.login-form');
 
 loginFormEll.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
-    event.preventDefault();
+     event.preventDefault();
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
 
@@ -12,6 +12,7 @@ if (email !== "" && password !== "") {
              password
          } 
          console.log(formData);
+         loginFormEll.reset();
     }
 else {alert("Всі поля повинні бути заповнені!")}
 }
